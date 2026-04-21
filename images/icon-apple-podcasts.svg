@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <linearGradient id="apple-podcast-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F452FF"/>
+      <stop offset="100%" stop-color="#832BC1"/>
+    </linearGradient>
+  </defs>
+  <rect width="24" height="24" rx="5.4" fill="url(#apple-podcast-grad)"/>
+  <path fill="#fff" d="M12 5.5a5.5 5.5 0 0 0-2.2 10.54 1 1 0 0 1 .7.95v.51a1.5 1.5 0 0 0 3 0v-.51a1 1 0 0 1 .7-.95A5.5 5.5 0 0 0 12 5.5zm0 2a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zm0 1.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+</svg>
