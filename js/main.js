@@ -18,19 +18,23 @@
   const mobileNav = document.getElementById('mobileNav');
 
   if (menuBtn && mobileNav) {
+    function closeMobileNav() {
+      menuBtn.classList.remove('active');
+      mobileNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
     menuBtn.addEventListener('click', function () {
-      menuBtn.classList.toggle('active');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+      var isOpen = mobileNav.classList.toggle('open');
+      menuBtn.classList.toggle('active', isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Close on link click
     mobileNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menuBtn.classList.remove('active');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileNav);
     });
   }
 
